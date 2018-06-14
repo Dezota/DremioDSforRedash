@@ -97,7 +97,7 @@ class DremioODBC(BaseSQLQueryRunner):
                     "default": "{Dremio ODBC Driver 64-bit}"
                 }
             },
-            "required": ["user","password"],
+            "required": ["host","user","password"],
             "secret": ["password"]
         }
 
