@@ -41,3 +41,4 @@ wget -O $REDASH_BASE_PATH/current/client/dist/images/db-logos/dremio_odbc.png "h
 wget -O $REDASH_BASE_PATH/current/client/app/assets/images/db-logos/dremio_odbc.png "https://raw.githubusercontent.com/Dezota/DremioDSforRedash/master/dremio_odbc.png"
 # Make sure this is the only entry for REDASH_ADDITIONAL_QUERY_RUNNERS.  If you have others then update env manually
 echo "export REDASH_ADDITIONAL_QUERY_RUNNERS=redash.query_runner.python,redash.query_runner.dremio_odbc" >> $REDASH_BASE_PATH/.env
+supervisorctl restart all
