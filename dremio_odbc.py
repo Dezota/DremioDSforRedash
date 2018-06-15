@@ -46,7 +46,7 @@ class DremioJSONEncoder(JSONEncoder):
 types_map = {
     1: TYPE_STRING,
     2: TYPE_STRING,
-    3: TYPE_FLOAT,
+    3: TYPE_INTEGER,
     4: TYPE_DATETIME,
     5: TYPE_FLOAT,
 }
@@ -97,7 +97,7 @@ class DremioODBC(BaseSQLQueryRunner):
                     "default": "{Dremio ODBC Driver 64-bit}"
                 }
             },
-            "required": ["host","user","password"],
+            "required": ["server","user","password"],
             "secret": ["password"]
         }
 
