@@ -8,7 +8,7 @@ For more details and documentation on Redash go to their [website](https://www.r
 For more details and documentation on Dremio go to their [website](https://www.dremio.com/).
 
 ### Install the Driver into Redash.io
-#### Set this if your base url is different than the default hostname
+#### Run this for an existing instance if you aren't using our custom Docker image
 ```
 wget -O - https://raw.githubusercontent.com/Dezota/DremioDSforRedash/master/install_ubuntu.sh | bash
 ```
