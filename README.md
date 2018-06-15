@@ -2,7 +2,7 @@
 
 # Dremio Data Source Driver for Redash.io
 
-This is a[Redash](https://github.com/getredash/redash) data source driver that support Dremio Server. The best way to try it out is to use the [Dezota Redash Docker Image](https://hub.docker.com/r/dezota/redash/). More details on the image and its associated Docker Compose files can be found [here](https://github.com/Dezota/dockerfiles/tree/master/redash).
+This is a [Redash](https://github.com/getredash/redash) data source driver that support Dremio Server. The best way to try it out is to use the [Dezota Redash Docker Image](https://hub.docker.com/r/dezota/redash/). More details on the image and its associated Docker Compose files can be found [here](https://github.com/Dezota/dockerfiles/tree/master/redash).
 
 For more details and documentation on Redash go to their [website](https://www.redash.io/).
 For more details and documentation on Dremio go to their [website](https://www.dremio.com/).
