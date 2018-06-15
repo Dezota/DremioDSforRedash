@@ -37,6 +37,13 @@ import uuid
 from redash.query_runner import *
 from redash.utils import JSONEncoder
 
+# Dremio needs the prefix in the table schema to be in double quotes
+def FormatDremioTableSchema( dts ):
+   dtsarr = dts.split('.');
+   dtsarr[0] = '"%s"'%dtsarr[0]
+   dtsdelim = "."
+   return [dtsdelim.join(dtsarr)]
+   
 class DremioJSONEncoder(JSONEncoder):
     def default(self, o):
         if isinstance(o, uuid.UUID):
@@ -135,7 +142,7 @@ class DremioODBC(BaseSQLQueryRunner):
 
         for row in results['rows']:
             if row['table_schema'] != self.configuration['db']:
-                table_name = u'{}.{}'.format(row['table_schema'], row['table_name'])
+                table_name = u'{}.{}'.format(FormatDremioTableSchema(row['table_schema']), row['table_name'])
             else:
                 table_name = row['table_name']
 
