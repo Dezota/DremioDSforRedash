@@ -42,7 +42,7 @@ def FormatDremioTableSchema( dts ):
    dtsarr = dts.split('.');
    dtsarr[0] = '"%s"'%dtsarr[0]
    dtsdelim = "."
-   return [dtsdelim.join(dtsarr)]
+   return dtsdelim.join(dtsarr)
    
 class DremioJSONEncoder(JSONEncoder):
     def default(self, o):
@@ -142,8 +142,7 @@ class DremioODBC(BaseSQLQueryRunner):
 
         for row in results['rows']:
             if row['table_schema'] != self.configuration['db']:
-                dfts = FormatDremioTableSchema(row['table_schema'])
-                table_name = u'{}.{}'.format(dfts, row['table_name'])
+                table_name = u'{}.{}'.format(FormatDremioTableSchema(row['table_schema']), row['table_name'])
             else:
                 table_name = row['table_name']
 
