@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #   Dremio Data Source Driver for Redash
-#   Ubuntu Install Script[B
+#   Ubuntu Install Script
 #
 #   Written by Brian K. Holman (bholman@dezota.com)
 #
